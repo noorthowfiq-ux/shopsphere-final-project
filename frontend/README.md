@@ -1,16 +1,113 @@
-# React + Vite
+# ShopSphere — MERN Stack E-Commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce web application built with the MERN stack, featuring product browsing, user authentication, shopping cart management, checkout, order tracking, and an admin dashboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Customer Features
+- Browse products with images, descriptions, prices, and stock availability
+- Search, filter, and sort products
+- View detailed product information
+- Register and log in securely
+- Add products to the shopping cart
+- Update quantities and remove cart items
+- Checkout with Cash on Delivery (COD)
+- View order confirmation and order history
+- Manage account profile information
 
-## React Compiler
+### Admin Features
+- Add, edit, and delete products
+- Manage product inventory
+- View and search customer orders
+- Filter orders by status
+- Update order statuses
+- Access administrative features based on user roles
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend**
+- React
+- Vite
+- Axios
+- Lucide React
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend**
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+- bcryptjs
+
+## Project Structure
+
+```text
+ShopSphere/
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+├── .gitignore
+└── README.md
+```
+
+*Folder names may differ slightly depending on the final project structure.*
+
+
+
+
+
+
+
+## API Overview
+
+| Endpoint | Purpose |
+|---|---|
+| `/api/products` | Browse products |
+| `/api/auth/register` | Register a user |
+| `/api/auth/login` | Log in |
+| `/api/auth/profile` | View or update the authenticated profile |
+| `/api/cart` | Manage the shopping cart |
+| `/api/orders` | Create and view orders |
+| `/api/orders/admin/all` | View all orders as an administrator |
+
+Protected endpoints require authentication. Administrative endpoints require appropriate admin permissions.
+
+## Security
+
+- Password hashing with bcryptjs
+- JWT-based authentication
+- Role-based authorization for administrative operations
+- Environment variables for database credentials and JWT secrets
+- Server-side validation and access control
+
+## Future Improvements
+
+- Online payment gateway integration
+- Product reviews and ratings
+- Product image upload
+- Wishlist functionality
+- Email notifications
+- Deployment with production environment configuration
+
+## Author
+
+**Noor Thowfiq**
+
+Full-Stack Development Project
+
+## License
+
+This project was created for educational and portfolio purposes. 
